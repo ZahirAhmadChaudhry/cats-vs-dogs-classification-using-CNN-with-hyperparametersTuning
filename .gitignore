@@ -129,6 +129,7 @@ venv/
 ENV/
 env.bak/
 venv.bak/
+venv-CNN
 
 # Spyder project settings
 .spyderproject
@@ -160,3 +161,44 @@ cython_debug/
 #  and can be added to the global gitignore or merged into this file.  For a more nuclear
 #  option (not recommended) you can uncomment the following to ignore the entire idea folder.
 #.idea/
+
+
+# Additions to exclude data, model, and log files:
+
+# Data files (you may modify the 'data/' folder path if needed)
+data/
+*.csv
+*.h5
+*.dat
+*.pkl
+*.joblib
+
+# Model files (common machine learning model formats)
+*.ckpt               # TensorFlow checkpoints
+*.h5                 # Keras model files
+*.pb                 # TensorFlow Protobuf model files
+*.onnx               # ONNX model files
+*.pth                # PyTorch model files
+
+# Logs and results
+logs/
+*.log
+*.out                # Output files
+*.err                # Error files
+*.npy                # NumPy binary files
+
+# Exclude large results or outputs, such as saved plots or visualizations
+*.png
+*.jpg
+*.jpeg
+*.svg
+
+# Exclude Jupyter notebooks (if you are not using them)
+*.ipynb
+
+# Exclude local development settings (VS Code, PyCharm, etc.)
+.vscode/
+.idea/
+
+# If you want to exclude virtual environments, you can keep this entry
+venv/
